@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+  <style type="text/css">
+  svg{
+    border: 1px solid #d8d5d5;
+  }
+  line#signal1 {
+      stroke-dasharray: 5;
+      stroke-dashoffset: 500;
+      animation: dash1 1s linear infinite;
+      animation-direction: forward;
+  }
+  line#signal2 {
+      stroke-dasharray: 5;
+      stroke-dashoffset: 500;
+      animation: dash2 1s linear infinite;
+      animation-direction: reverse;
+  }
+  @keyframes dash1 {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes dash2 {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  ​</style>
+  </head>
+  <body>
+  <div id="simulator"></div>
+  <button id="start_sim">Start Simulation</button>
+  <button id="pause_sim">Pause Simulation</button>
+  <button id="reset_sim">Reset Simulation</button>
+  <script src="lib/intersect.js" type="text/javascript"></script>
+  <script type="text/javascript" src="lib/d3.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  </body>
+  </html>
